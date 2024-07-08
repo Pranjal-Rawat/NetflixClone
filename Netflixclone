@@ -1,0 +1,381 @@
+<html>
+
+<head>
+    <title>
+        Netflix India - Watch TV shows Online, Watch Movies Online
+    </title>
+    <link href="Netflixiconn.png" rel="icon">
+    <link rel="stylesheet" href="path/to/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5% 20%;
+            z-index: 10;
+        }
+
+        .navbarnetflix {
+            height: 40px;
+            width: 150px;
+
+        }
+
+        .navbar_nav_items {
+            display: flex;
+            gap: 10px;
+        }
+
+        .netflixlogo {
+            width: 100%;
+            height: 100%;
+        }
+
+        .languageDropdown {
+            background: transparent;
+            border: none;
+            color: white;
+        }
+
+        .dropdown_container {
+            border: 1px solid white;
+            width: 115px;
+            height: 35px;
+            padding: 0.4rem;
+            border-radius: 5px;
+            background: rgba(0.5, 0.5, 0.5, 0.4);
+        }
+
+        .signinbutton {
+            border: #dc030f;
+            background-color: #dc030f;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 5px;
+            height: 35px;
+            width: 80px;
+
+        }
+
+        .hero_bg_cont {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero_bg_img {
+            width: 100%;
+            height: 100%;
+            object-fit: auto;
+            background-color: linear-gradient(to-bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+        }
+
+        .hero_bg_overlay {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .her {
+            position: absolute;
+            top: 30%;
+            left: 25%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .herotitle {
+            font-weight: 600;
+            font-size: 3rem;
+        }
+
+        .herosubtitle,
+        .hero_desc {
+            font-weight: 400;
+            font-size: 1.3rem;
+        }
+
+        .email {
+            width: 450px;
+            height: 60px;
+            padding: 0.25rem 0.5rem;
+            color: black;
+            border-radius: 3px;
+            border-color: transparent;
+        }
+
+        .butto {
+            font-size: large;
+            width: 170px;
+            height: 60px;
+            background-color: #dc030f;
+            border: 1px solid #dc030f;
+            color: white;
+        }
+
+        .card1,
+        .card2,
+        .card3,
+        .footer {
+            width: 100%;
+            border-top: 8px solid rgb(69, 69, 69);
+            padding: 50px;
+        }
+
+        .card1 {
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 50%, 40%;
+            text-align: left;
+            align-items: center;
+            padding: 20px 45px 50px;
+        }
+
+        .desc1 {
+            padding-left: 80px;
+        }
+
+        .card1 video {
+            position: relative;
+            left: -90px;
+            width: 100%;
+            height: 60%;
+            grid-column: 2/2;
+            grid-row: 1/2;
+            z-index: -1;
+        }
+
+        .card1 img {
+            grid-column: 2/2;
+            grid-row: 1/2;
+        }
+
+        .StyleCard h1 {
+            font-size: 3rem;
+            padding: 1rem;
+            padding-left: 0;
+        }
+
+        .StyleCard h3 {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+
+        .card2 {
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 50%, 40%;
+            text-align: left;
+            align-items: center;
+            padding: 25px 45px 50px;
+        }
+
+        .card2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .card2 img {
+            order: 1;
+            margin-right: 10px;
+        }
+
+        .desc2 {
+            order: 2;
+            margin-left: 20px;
+        }
+
+        .card3 {
+            height: 65%;
+            width: 100%;
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 0%, 40%;
+            text-align: left;
+            align-items: center;
+            padding: 25px 45px 50px;
+        }
+
+        .desc3 {
+            padding-left: 80px;
+            padding-right: 20px;
+        }
+
+        .card3 img {
+            grid-column: 2/2;
+            grid-row: 1/2;
+        }
+
+        .card3 video {
+            position: relative;
+            top: -80px;
+            left: 120px;
+            width: 42%;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            z-index: -1;
+        }
+
+        .footer, footer a{
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        .footer p{
+            margin-bottom: 1.5rem;
+
+        }
+
+        .footer .coloumn{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+            padding-left: 80px;
+            padding-bottom: 40px;
+        }
+
+        .footer li{
+            line-height: 1.9rem;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbarnetflix">
+                <img src="Logo.png" alt="Netflix Logo" class="netflixlogo" />
+            </div>
+            <div class="navbar_nav_items">
+                <div class="nav_item">
+                    <div class="dropdown_container">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path opacity="1" fill="#1E3050"
+                                d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z" />
+                        </svg>
+                        <select name="language" id="languageselect" class="languageDropdown">
+                            <option value="English" selected>English</option>
+                            <option>Hindi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="nav_item">
+                    <button class="signinbutton" onclick="">Sign In</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero_bg_cont">
+                <img src="netflixbackground.jpg" alt="Netflix background image " class="hero_bg_img" />
+            </div>
+            <div class="hero_bg_overlay">
+                <div class="her">
+                    <h1 class="herotitle">Unlimited movies, TV shows and more</h1><br>
+                    <p class="herosubtitle">Watch anywhere. Cancel anytime</p><br>
+                    <p class="hero_desc">
+                        <nobr>Ready to watch? Enter your email to create or restart your membership.</nobr><br>
+
+                        <br>
+                        <nobr><input type="email" placeholder="Email Address" class="email"><button class="butto">Get
+                                Started</button></input></nobr>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="StyleCard">
+            <div class="card1">
+                <div class="desc1">
+                    <h1>Enjoy on your TV</h1><br>
+                    <h3>Watch on smart TVs, PlayStation, Xbox, Chromecast,<br> Apple TV, Blu-ray players and more.</h3>
+                </div>
+                <img src="tv.png" alt="Netflix TV">
+                <video class="video" autoplay="" playsinline="" muted="" loop="" <source src="video-tv-in-0819.m4v"
+                    type="video/mp4"></video>
+            </div>
+            <div class="card2">
+                <div class="desc2">
+                    <h1>Download your shows to watch offline.</h1><br>
+                    <h3>Save your favorites easily and always have<br> something to watch.</h3>
+                </div>
+                <img src="mobileNetflix.jpg" alt="Netflix On any device">
+            </div>
+            <div class="card3">
+                <div class="desc3">
+                    <h1>Watch everywhere.</h1><br>
+                    <h3>
+                        Stream unlimited movies and TV shows<br> on your phone, tablet, laptop, and TV.
+                    </h3>
+                </div>
+                <img src="phoneTabMonitor.png" alt="Netflix On any device">
+                <video class="video" autoplay="" playsinline="" muted="" loop="" <source
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                    type="video/mp4">
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p style="padding: 80px;">Questions? Call 000-800-919-1694 </p>
+        <div class="coloumn">
+            <ul>
+
+                <li>FAQ</li>
+                <li>Investor Relations</li>
+                <li>Privacy</li>
+                <li>Speed Test</li>
+            </ul>
+            <ul>
+
+                <li><a href="https://help.netflix.com/">Help Centre</a></li>
+                <li>Jobs</li>
+                <li>Cookie Preferences</li>
+                <li>Legal Notices</li>
+            </ul>
+            <ul>
+
+                <li>Account</li>
+                <li>Ways to Watch</li>
+                <li>Corporate Information</li>
+                <li>Only on netflix</li>
+
+            </ul>
+
+            <ul>
+
+                <li>
+                    Media Centre</li>
+                <li>
+                    Terms of Use</li>
+                <li>Privacy</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
